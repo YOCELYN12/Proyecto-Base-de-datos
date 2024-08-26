@@ -1,1 +1,39 @@
-CREATE DATABASE Hoteles;
+-- SQLBook: Code
+
+
+
+-- CREATE DATABASE Hoteles;
+
+use Hoteles;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
