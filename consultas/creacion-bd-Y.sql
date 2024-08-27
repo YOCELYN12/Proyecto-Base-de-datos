@@ -27,3 +27,8 @@ SELECT * FROM Reservas;
 CREATE TABLE Habitaciones (Numero_habitacion VARCHAR(100) PRIMARY KEY, Num_cedula Int, Numero_reservacion Int, Disponibilidad_habitaciones VARCHAR(100), Tipo_habitacion VARCHAR(255), FOREIGN KEY(Num_cedula) REFERENCES Usuarios(Num_cedula), CONSTRAINT Numero_reservacion Foreign Key (Numero_reservacion) REFERENCES Reservas(Numero_reservacion))
 
 SELECT * FROM Habitaciones
+
+
+Drop Table Hoteles;
+
+SELECT * FROM Hoteles;
