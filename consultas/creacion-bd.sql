@@ -21,3 +21,7 @@
 
 SELECT * FROM Usuarios
 
+SELECT * FROM Reservas;
+INSERT INTO Reservas (Numero_reservacion, Num_cedula, Fecha_reservacion, Tiempo_reservacion) VALUES (22 ,1310225 , "2023-12-20", 3);
+
+ 
