@@ -8,3 +8,5 @@ alter table Administradores change column cédulajurídica cédula_jurídica var
 
 CREATE TABLE Usuarios(Nombre varchar(100), Cédula INT PRIMARY KEY NOT NULL, Correo_electrónico varchar(100), Número_reservación INT NOT NULL);
 SELECT * FROM Usuarios
+
+CREATE TABLE Reservas(Número_reservación INT PRIMARY KEY NOT NULL, Fecha_)
