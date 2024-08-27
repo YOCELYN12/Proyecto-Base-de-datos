@@ -33,3 +33,7 @@ INSERT INTO Reservas (Numero_reservacion, Num_cedula, Fecha_reservacion, Tiempo_
 (45, 112750278, "2023-09-8",1),
 (5, 11241987, "2023-10-22", 2 ),
 (10, 120430162, "2023-02-02", 2);
+
+SELECT * FROM Habitaciones;
+
+
