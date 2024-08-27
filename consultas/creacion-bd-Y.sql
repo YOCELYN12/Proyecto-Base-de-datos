@@ -45,3 +45,11 @@ INSERT INTO Usuarios (Num_cedula, Nombre, Correo_electronico, Apellido) VALUES (
 
 SELECT * FROM Reservas;
 SELECT * FROM  Usuarios;
+
+SELECT * FROM habitaciones
+
+INSERT INTO Habitaciones (18,1310225,22,2, 'Habitacion doble estandar(una cama doble)'), (22,102583785,02,28,'Habitacion doble deluxe'),(11,302700071,08,10,'Habitacion doble deluxe'),(10,113310637,12,12,'Habitasion sencilla'),(10,12750278,45,50,'Habitacion deluxe'),(10,11241987,05,3,'Habitacion deluxe'),(1,120430162,10,0,'Habitacion sencilla')
+
+SELECT * FROM hoteles
+
+INSERT INTO Hoteles (Cedula_juridica, Ubicacion, Tarifas, Nombre_hotel, Numero_reservacion, Numero_habitacion) VALUES (101253967, '100m Sur y 300m Este de Parque Central de la Fortuna,21007 Fortuna, Costa Rica', 30 000, 'Hotel Monte Real',)
