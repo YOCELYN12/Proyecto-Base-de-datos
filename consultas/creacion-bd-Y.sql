@@ -33,3 +33,8 @@ CREATE TABLE Hoteles (Cedula_juridica VARCHAR(100) PRIMARY KEY, Ubicacion VARCHA
 Drop Table Hoteles;
 
 SELECT * FROM Hoteles;
+
+CREATE TABLE Administradores (ID INT PRIMARY KEY, Nombre VARCHAR(255), Email VARCHAR(255),Cedula_juridica VARCHAR(100), FOREIGN KEY (Cedula_juridica) REFERENCES Hoteles(Cedula_juridica))
+
+SELECT *FROM Administradores
+
