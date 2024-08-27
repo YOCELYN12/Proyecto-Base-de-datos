@@ -19,3 +19,17 @@
 
 
 
+SELECT * FROM Usuarios
+
+SELECT * FROM Reservas;
+
+SELECT * FROM Hoteles;
+INSERT INTO Reservas (Numero_reservacion, Num_cedula, Fecha_reservacion, Tiempo_reservacion) VALUES (22 ,1310225 , "2023-12-20", 3);
+SELECT * FROM Hoteles;
+
+INSERT INTO Reservas (Numero_reservacion, Num_cedula, Fecha_reservacion, Tiempo_reservacion) VALUES (2,102583785 , "2023-10-25", 2 ),
+(8, 302700071 , "2023-10-10", 1),
+(12, 113310637, " 2023-09-8", 4),
+(45, 112750278, "2023-09-8",1),
+(5, 11241987, "2023-10-22", 2 ),
+(10, 120430162, "2023-02-02", 2);
