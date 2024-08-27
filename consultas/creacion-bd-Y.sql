@@ -35,9 +35,9 @@ CREATE TABLE Administradores (ID INT PRIMARY KEY, Nombre VARCHAR(255), Email VAR
 
 SELECT *FROM Administradores
 
-
+ALTER TABLE Administradores add COLUMN Apellido VARCHAR(100) NOT NULL;
 USE Hotelogix;
 SELECT * FROM Usuarios;
 
-INSERT INTO Usuarios (Num_cedula, Nombre, Correo_electronico, Apellido) VALUES (1-310-225, 'Jose', 'jjvargas@gmail.com', 'Vargas')
-
+INSERT INTO Usuarios (Num_cedula, Nombre, Correo_electronico, Apellido) VALUES (1310225, 'Jose', 'jjvargas@gmail.com', 'Vargas'), (102583785, 'Maria', 'marias@gmail.com', 'Sandoval') ;
+INSERT INTO Usuarios (Num_cedula, Nombre, Correo_electronico, Apellido) VALUES (102583785, 'Maria', 'marias@gmail.com', 'Sandoval'), (302700071, 'Luis', 'Imhernandez@gmail.com', 'Hernandez'), (113310637, 'Marta', 'mquiros@gmail.com', 'Quiros'), (112750278,'Ester', 'ester@gmail.com','Ramirez'), (11241987, 'Marcos', 'mm@gmail.com','Barrientos'), (120430162, 'Alexander', 'amena@gmail.com', 'Mena')
