@@ -28,6 +28,7 @@ CREATE TABLE Habitaciones (Numero_habitacion VARCHAR(100) PRIMARY KEY, Num_cedul
 
 SELECT * FROM Habitaciones
 
+CREATE TABLE Hoteles (Cedula_juridica VARCHAR(100) PRIMARY KEY, Ubicacion VARCHAR(255), Tarifas INT, Nombre_hotel VARCHAR(255), Numero_reservacion INT,Numero_habitacion VARCHAR(100),  FOREIGN KEY (Numero_habitacion) REFERENCES Habitaciones(Numero_habitacion),FOREIGN KEY (Numero_reservacion) REFERENCES Reservas(Numero_reservacion))
 
 Drop Table Hoteles;
 
