@@ -38,14 +38,11 @@ INSERT INTO Clientes(Num_cedula, Fecha_reservacion, Dias_reservados, Nombre_hote
 (" 1-1241-987", "2023-10-22", 2, "Wyndham Tamarindo"),
 ("1-2043-0162", "2023-02-02", 4, "Jardin de Lourdes");
 
+INSERT INTO Administradores(Nombre, Apellido, Email) 
+VALUES ("Javier", "Solis", "jsolis@gmail.com"); --Eliminar 1 administrador
+INSERT INTO Administradores( Nombre, Apellido, Email) VALUES ("Jessica", "Madriz", "jmadriz@gmail.com");
 
 
-
-
-
--- Eliminar un cliente con un store procedures(Wyndham Escazu)
--- INSERT INTO Usuarios (ID_usuario,Nombre, Apellido,Correo_electronico, ID_cliente, ID_Admin)
---  VALUES ( 1,'Jose','Vargas', 'jjvargas@gmail.com',1,1);
 
 INSERT INTO Usuarios(ID_usuario,Nombre, Apellido,Correo_electronico, ID_cliente, ID_Admin)
  VALUES (2,"Maria", "Sandoval","marias@gmail.com",4,1),
@@ -56,8 +53,6 @@ INSERT INTO Usuarios(ID_usuario,Nombre, Apellido,Correo_electronico, ID_cliente,
  (7,"Alexander", "Mena", "amena@gmail.com",7,1),
  (8,"Javier", "Solis", "jsolis@gmail.com",6,1);
 
-INSERT INTO Administradores(Nombre, Apellido, Email) 
-VALUES ("Javier", "Solis", "jsolis@gmail.com"); --Eliminar 1 administrador
 
 
 

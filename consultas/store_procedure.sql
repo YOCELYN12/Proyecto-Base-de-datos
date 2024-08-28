@@ -2,7 +2,7 @@
 --P = parametro 
 -- Begin = que tiene que hacer
 
-
+--Store Procedures para poder agregar reservas.
 CREATE PROCEDURE AGREGAR_RESERVA(IN P_Num_reservacion INT, IN P_date DATE, IN P_time INT, IN P_ID INT)
 BEGIN 
     INSERT INTO Reservas(Numero_reservacion, Fecha_reservacion, Tiempo_reservacion, ID_usuario) VALUES (P_Num_reservacion, P_date, P_time, P_ID);
@@ -18,6 +18,20 @@ CALL AGREGAR_RESERVA(10, "2023-02-02",2,7);
 
 SELECT * FROM reservas
 
+
+
+-- Store Procedures para consultar la disponibilidad de habitaciones por fecha.
+
+CREATE PROCEDURE DISPONIBILIDAD_HABITACIONES(IN Fecha_consultar DATE)
+BEGIN
+    SELECT COUNT(*) AS NumeroDeReservasDisponibles
+    FROM reservas
+    WHERE DATE_ADD(Fecha_reservacion, INTERVAL Tiempo_reservacion DAY) < Fecha_consultar;
+END;
+
+-- Para borrar el store procedures
+-- DROP PROCEDURE DISPONIBILIDAD_HABITACIONES;
+CALL DISPONIBILIDAD_HABITACIONES("2024-08-28");
 -- CREATE Procedure AGREGAR_CLIENTE(IN P_Identificacion VARCHAR, IN P_Date DATE , IN P_Dias INT, IN P_Hotel VARCHAR)
 -- BEGIN
 --     INSERT INTO Clientes(Num_cedula, Fecha_reservacion, Dias_reservados, Nombre_hotel) VALUES ( P_Identificacion, P_Date,P_Dias, P_Hotel);
