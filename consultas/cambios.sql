@@ -30,7 +30,7 @@ SELECT * FROM habitaciones;
 SELECT * FROM hoteles;
 
 -- INGRESO DE INFORMACION
-
+DROP TABLE Clientes;
 INSERT INTO Clientes( Num_cedula, Fecha_reservacion, Dias_reservados, Nombre_hotel) VALUES ("3-0270-0071", "2023-12-25", 3, "Wyndham Escazu");
 INSERT INTO Clientes(Num_cedula, Fecha_reservacion, Dias_reservados, Nombre_hotel) VALUES ("1-0258-3785", "2023-10-15", 2, "Terrazas del Caribe"),
 ("1-12750278", "2023-09-8", 1, "Sheraton"),
