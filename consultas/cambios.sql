@@ -6,6 +6,8 @@
 -- CREATE TABLE Hoteles
 
 -- SELECT * FROM Hoteles
+-- creacion base de datos 
+DROP DATABASE Hotelogix;
 CREATE DATABASE Hotelogix;
 
 USE Hotelogix;
@@ -30,7 +32,10 @@ SELECT * FROM habitaciones;
 SELECT * FROM hoteles;
 
 -- INGRESO DE INFORMACION
-DROP TABLE Clientes;
+-- DROP TABLE Clientes;
+-- DROP TABLE Usuarios;
+-- DROP TABLE Reservas;
+-- DROP TABLE Administradores;
 INSERT INTO Clientes( Num_cedula, Fecha_reservacion, Dias_reservados, Nombre_hotel) VALUES ("3-0270-0071", "2023-12-25", 3, "Wyndham Escazu");
 INSERT INTO Clientes(Num_cedula, Fecha_reservacion, Dias_reservados, Nombre_hotel) VALUES ("1-0258-3785", "2023-10-15", 2, "Terrazas del Caribe"),
 ("1-12750278", "2023-09-8", 1, "Sheraton"),
@@ -43,11 +48,16 @@ INSERT INTO Administradores( Nombre, Apellido, Email) VALUES ("Javier", "Solis",
 INSERT INTO Administradores( Nombre, Apellido, Email) VALUES ("Jessica", "Madriz", "jmadriz@gmail.com");
 
 
---Revisar
+--Informacion habitaciones
 INSERT INTO Habitaciones (Numero_habitacion, cedula_juridica, Numero_reservacion, Disponibilidad_habitaciones, Tipo_habitacion)
-VALUES ()
+VALUES ("22", "200-8970-3967",02, "28", "Habitacion doble deluxe"),
+("11", "101-2569-9874", 08,"10" ,"Habitacion doble deluxe"),
+("10", "251-338-5987", 12,"10" ,"Habitacion sencilla"),
+("15", "222-338-5978", 45, "50", "Habitacion Deluxe"),
+("20","200-330-6678", 5, "3","Habitacion Deluxe"),
+("1","111-4240-654", 2, "0", "Habitacion sencilla");
 
-SELECT * FROM hoteles
+--Informacion Hoteles
 
 INSERT INTO Hoteles (Cedula_juridica, Ubicacion, Tarifas, Nombre_hotel, Numero_reservacion) 
 VALUES ('200-8970-3967','Entrada Hotel Azania 450 metros directo manteniendo la derecha ',60000, 'Terrazas del Caribe Hotel',02),
