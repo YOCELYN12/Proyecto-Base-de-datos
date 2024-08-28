@@ -33,3 +33,11 @@ INSERT INTO Reservas (Numero_reservacion, Num_cedula, Fecha_reservacion, Tiempo_
 (45, 112750278, "2023-09-8",1),
 (5, 11241987, "2023-10-22", 2 ),
 (10, 120430162, "2023-02-02", 2);
+
+SELECT * FROM Habitaciones;
+SELECT * FROM Administradores;
+INSERT INTO Administradores(ID, Nombre, Email, Cedula_juridica, Apellido) VALUES (1333999, "Jessica" , "jmadriz@gmail.com ","200-8970-3967", "Madriz" ),
+( 3256987, "Javier", "jsolis@gmail.com","1-0125-3967", "Solis" ),
+( 1333999, "Isabella", "isabellas@gmail.com ","251-338-5987", "Sandi" )
+(2895789,"Rebeca", "isabellas@gmail.com", "Benamburg", )
+
