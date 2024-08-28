@@ -11,10 +11,16 @@ CREATE DATABASE Hotelogix;
 
 USE Hotelogix;
 CREATE TABLE Clientes(ID_clientes INT AUTO_INCREMENT PRIMARY KEY, Num_cedula VARCHAR(20), Fecha_reservacion DATE, Dias_reservados INT, Nombre_hotel VARCHAR(30));
+SELECT * FROM Clientes;
 
+INSERT INTO Clientes( Num_cedula, Fecha_reservacion, Dias_reservados, Nombre_hotel) VALUES ("3-0270-0071", "2023-12-25", 3, "Wyndham Escazu");
+INSERT INTO Administradores (Nombre, Apellido, Email)
+VALUES ('Juan', 'Pérez', 'juan.perez@email.com');
 CREATE TABLE Administradores(ID_admin INT AUTO_INCREMENT PRIMARY KEY, Nombre varchar(20), Apellido VARCHAR(20), Email VARCHAR(30));
 CREATE TABLE Usuarios (ID_usuario int PRIMARY KEY, Nombre VARCHAR(100), Apellido VARCHAR(100), Correo_electronico VARCHAR(255), ID_cliente INT, ID_Admin INT,FOREIGN KEY (ID_cliente) REFERENCES Clientes(ID_clientes), FOREIGN KEY (ID_Admin) REFERENCES Administradores(ID_Admin));
+SELECT * FROM Usuarios;
 
+ --INSERT INTO Usuarios( ID_usuario, Nombre, Apellido, Correo_electronico, ID_cliente, ID_Admin) VALUES ()
  CREATE TABLE Reservas (Numero_reservacion INT PRIMARY KEY, Fecha_reservacion DATE NOt NULL, Tiempo_reservacion INT NOT NULL, ID_usuario INT, Foreign Key (ID_usuario) REFERENCES Usuarios(ID_usuario));
 
 CREATE TABLE Hoteles (Cedula_juridica VARCHAR(100) PRIMARY KEY, Ubicacion VARCHAR(255), Tarifas INT, Nombre_hotel VARCHAR(255), Numero_reservacion INT, FOREIGN KEY (Numero_reservacion) REFERENCES Reservas(Numero_reservacion));
@@ -23,9 +29,7 @@ CREATE TABLE Habitaciones (Numero_habitacion VARCHAR(100) PRIMARY KEY, cedula_ju
 
 
 
-INSERT INTO Usuarios (Num_cedula, Nombre, Correo_electronico, Apellido) VALUES (1310225, 'Jose', 'jjvargas@gmail.com', 'Vargas'), (102583785, 'Maria', 'marias@gmail.com', 'Sandoval') ;
-INSERT INTO Usuarios (Num_cedula, Nombre, Correo_electronico, Apellido) VALUES (302700071, 'Luis', 'Imhernandez@gmail.com', 'Hernandez'), (113310637, 'Marta', 'mquiros@gmail.com', 'Quiros'), (112750278,'Ester', 'ester@gmail.com','Ramirez'), (11241987, 'Marcos', 'mm@gmail.com','Barrientos'), (120430162, 'Alexander', 'amena@gmail.com', 'Mena')
-
+INSERT INTO Usuarios ( ID_usuario,Nombre, Apellido,Correo_electronico, ID_cliente, ID_Admin) VALUES ( 1,'Jose','Vargas', 'jjvargas@gmail.com',1,1);
 
 SELECT * FROM  Usuarios;
 SELECT * FROM Reservas;
