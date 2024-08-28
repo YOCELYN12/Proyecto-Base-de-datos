@@ -27,7 +27,7 @@ INSERT INTO Clientes(Num_cedula, Fecha_reservacion, Dias_reservados, Nombre_hote
 
 CREATE TABLE Administradores(ID_admin INT AUTO_INCREMENT PRIMARY KEY, Nombre varchar(20), Apellido VARCHAR(20), Email VARCHAR(30));
  SELECT * FROM Administradores;
--- DROP TABLE Administradores;
+DROP TABLE Administradores;
 INSERT INTO Administradores( Nombre, Apellido, Email) VALUES ("Javier", "Solis", "jsolis@gmail.com");
 CREATE TABLE Usuarios (ID_usuario int PRIMARY KEY, Nombre VARCHAR(100), Apellido VARCHAR(100), Correo_electronico VARCHAR(255), ID_cliente INT, ID_Admin INT,FOREIGN KEY (ID_cliente) REFERENCES Clientes(ID_clientes), FOREIGN KEY (ID_Admin) REFERENCES Administradores(ID_Admin));
 SELECT * FROM Usuarios;
