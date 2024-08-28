@@ -20,14 +20,6 @@ SELECT * FROM reservas
 
 
 
--- Store Procedures para consultar la disponibilidad de habitaciones por fecha.
-
-CREATE PROCEDURE DISPONIBILIDAD_HABITACIONES(IN Fecha_consultar DATE)
-BEGIN
-    SELECT COUNT(*) AS NumeroDeReservasDisponibles
-    FROM reservas
-    WHERE DATE_ADD(Fecha_reservacion, INTERVAL Tiempo_reservacion DAY) < Fecha_consultar;
-END;
 
 -- Para borrar el store procedures
 -- DROP PROCEDURE DISPONIBILIDAD_HABITACIONES;
@@ -37,3 +29,17 @@ CALL DISPONIBILIDAD_HABITACIONES("2024-08-28");
 --     INSERT INTO Clientes(Num_cedula, Fecha_reservacion, Dias_reservados, Nombre_hotel) VALUES ( P_Identificacion, P_Date,P_Dias, P_Hotel);
 -- END ;
 -- comente por que me tira un error
+
+-- Store Procedures para consultar la disponibilidad de habitaciones por fecha.
+
+CREATE PROCEDURE DISPONIBILIDAD_HABITACIONES(IN Fecha_consultar DATE)
+BEGIN
+    SELECT COUNT(*) AS NumeroDeReservasDisponibles
+    FROM reservas
+    WHERE DATE_ADD(Fecha_reservacion, INTERVAL Tiempo_reservacion DAY) < Fecha_consultar;
+END;
+
+
+
+-- Store Procedures para calcular la ocupacion de un hotel en un rango de fechas
+CREATE PROCEDURE DIPONIBILIDAD_HOTELES(IN )
