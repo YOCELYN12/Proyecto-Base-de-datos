@@ -3,10 +3,10 @@
 -- Begin = que tiene que hacer
 
 --Store Procedures para poder agregar reservas.
-CREATE PROCEDURE AGREGAR_RESERVA(IN P_Num_reservacion INT, IN P_date DATE, IN P_time INT, IN P_ID INT)
+CREATE PROCEDURE AGREGAR_RESERVA(IN P_Num_reservacion INT, IN P_date DATE, IN P_time INT, IN P_ID INT,IN P_Numero_habitacion INT)
 BEGIN 
-    INSERT INTO Reservas(Numero_reservacion, Fecha_reservacion, Tiempo_reservacion, ID_usuario) VALUES (P_Num_reservacion, P_date, P_time, P_ID);
-END  ;
+    INSERT INTO Reservas(Numero_reservacion, Fecha_reservacion, Tiempo_reservacion, ID_usuario,Numero_habitacion) VALUES (P_Num_reservacion, P_date, P_time, P_ID,P_Numero_habitacion);
+END ;
 
 -- reserva
 Call AGREGAR_RESERVA(02, "2023-10-25", 2,2);

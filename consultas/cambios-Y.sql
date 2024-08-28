@@ -38,14 +38,26 @@ INSERT INTO Clientes(Num_cedula, Fecha_reservacion, Dias_reservados, Nombre_hote
 (" 1-1241-987", "2023-10-22", 2, "Wyndham Tamarindo"),
 ("1-2043-0162", "2023-02-02", 4, "Jardin de Lourdes");
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 41a6d1159cdbba685825ff1f3b4f175fe09e7846
 
 <<<<<<<<< Temporary merge branch 1
 
 INSERT INTO Clientes( Num_cedula, Fecha_reservacion, Dias_reservados, Nombre_hotel)
  VALUES ("1-1331-0637", "2023-09-8", 4, "Escazu Resident"),
 ("1-310-225", "2023-12-20", 3, "Monte Real");
+<<<<<<< HEAD
+=======
+INSERT INTO Administradores(Nombre, Apellido, Email) 
+VALUES ("Javier", "Solis", "jsolis@gmail.com"); --Eliminar 1 administrador
+INSERT INTO Administradores( Nombre, Apellido, Email) VALUES ("Jessica", "Madriz", "jmadriz@gmail.com");
+>>>>>>> a82d2f9962fbc6386cbaeb1f9223828184848ce9
+=======
 =========
 >>>>>>>>> Temporary merge branch 2
+>>>>>>> 41a6d1159cdbba685825ff1f3b4f175fe09e7846
 
 
 -- Eliminar un cliente con un store procedures(Wyndham Escazu)
@@ -77,3 +89,17 @@ UPDATE Habitaciones SET Disponibilidad_habitaciones = 1 WHERE Disponibilidad_hab
 UPDATE Habitaciones SET Disponibilidad_habitaciones = 0 WHERE Disponibilidad_habitaciones = 50;
 UPDATE Habitaciones SET Disponibilidad_habitaciones = 1 WHERE Disponibilidad_habitaciones = 3;
 UPDATE Habitaciones SET Disponibilidad_habitaciones = 1 WHERE Disponibilidad_habitaciones = 28;
+
+UPDATE reservas SET Numero_habitacion = 1 WHERE Numero_reservacion = 2;
+UPDATE reservas SET Numero_habitacion = 10 WHERE Numero_reservacion = 12;
+UPDATE reservas SET Numero_habitacion = 11 WHERE Numero_reservacion = 8;
+UPDATE reservas SET Numero_habitacion = 15 WHERE Numero_reservacion = 45;
+UPDATE reservas SET Numero_habitacion = 20 WHERE Numero_reservacion = 5;
+UPDATE reservas SET Numero_habitacion = 22 WHERE Numero_reservacion = 2;
+UPDATE reservas SET Numero_habitacion = 11 WHERE Numero_reservacion = 8;
+UPDATE reservas SET Numero_habitacion =  WHERE Numero_reservacion = 10;
+
+SELECT * from reservas ;
+SELECT * from habitaciones;
+SELECT * FROM usuarios;
+SELECT * from clientes
