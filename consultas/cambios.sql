@@ -48,6 +48,7 @@ SELECT * FROM Reservas;
 --INSERT INTO Administradores(ID_admin)
 SELECT * FROM habitaciones
 
+--Revisar
 INSERT INTO Habitaciones (Numero_habitacion,Num_cedula,Numero_reservacion,Disponibilidad_habitaciones,Tipo_habitacion) 
 VALUES ('18',1310225,22,'2','Habitacion doble'), 
 ('22',102583785,02,'5','Habitacion doble deluxe'),
@@ -59,4 +60,5 @@ VALUES ('18',1310225,22,'2','Habitacion doble'),
 
 SELECT * FROM hoteles
 
-INSERT INTO Hoteles (Cedula_juridica, Ubicacion, Tarifas, Nombre_hotel, Numero_reservacion, Numero_habitacion) VALUES (101253967, '100m Sur y 300m Este de Parque Central de la Fortuna,21007 Fortuna, Costa Rica', 30 000, 'Hotel Monte Real',)
+INSERT INTO Hoteles (Cedula_juridica, Ubicacion, Tarifas, Nombre_hotel, Numero_reservacion, Numero_habitacion) 
+VALUES (101253967, '100m Sur y 300m Este de Parque Central de la Fortuna,21007 Fortuna, Costa Rica', 30 000, 'Hotel Monte Real',)

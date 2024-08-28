@@ -66,3 +66,6 @@ VALUES ('101253967','100m Sur y 300m Este de Parque Central de la Fortuna 21007 
 ('2223385978', 'Route 27 350 mts West Multiplaza  10203 San Jose Costa Rica',95000,'Sheraton San Jose Hoten,Costa Rica',45,'60'),
 ('2003306678','200 metro al este y 800 metros al norte del Banco Nacionaaal de Tamarindo 00011 Tamarindo Costa Rica',81000, 'Wyndham Tamarindo',05,'70'),
 ('1114240654', '2800 km al Sur del Restaurante Changai Piedades de Santa Ana',50000, 'Jardin de Lourdes',02,'06')
+
+
+DROP DATABASE Hotelogix;
