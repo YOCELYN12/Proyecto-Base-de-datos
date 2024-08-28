@@ -28,6 +28,10 @@ SELECT * FROM hoteles;
 
 INSERT INTO Clientes( Num_cedula, Fecha_reservacion, Dias_reservados, Nombre_hotel) 
 VALUES ("3-0270-0071", "2023-12-25", 3, "Wyndham Escazu");
+INSERT INTO Clientes( Num_cedula, Fecha_reservacion, Dias_reservados, Nombre_hotel)
+ VALUES ("1-1331-0637", "2023-09-8", 4, "Escazu Resident"),
+("1-310-225", "2023-12-20", 3, "Monte Real");
+
 INSERT INTO Clientes(Num_cedula, Fecha_reservacion, Dias_reservados, Nombre_hotel)
  VALUES ("1-0258-3785", "2023-10-15", 2, "Terrazas del Caribe"),
 ("1-12750278", "2023-09-8", 1, "Sheraton"),
@@ -42,8 +46,8 @@ INSERT INTO Clientes( Num_cedula, Fecha_reservacion, Dias_reservados, Nombre_hot
 
 
 -- Eliminar un cliente con un store procedures(Wyndham Escazu)
-INSERT INTO Usuarios (ID_usuario,Nombre, Apellido,Correo_electronico, ID_cliente, ID_Admin)
- VALUES ( 1,'Jose','Vargas', 'jjvargas@gmail.com',1,1);
+-- INSERT INTO Usuarios (ID_usuario,Nombre, Apellido,Correo_electronico, ID_cliente, ID_Admin)
+--  VALUES ( 1,'Jose','Vargas', 'jjvargas@gmail.com',1,1);
 
 INSERT INTO Usuarios(ID_usuario,Nombre, Apellido,Correo_electronico, ID_cliente, ID_Admin)
  VALUES (2,"Maria", "Sandoval","marias@gmail.com",4,1),
@@ -57,13 +61,5 @@ INSERT INTO Usuarios(ID_usuario,Nombre, Apellido,Correo_electronico, ID_cliente,
 INSERT INTO Administradores(Nombre, Apellido, Email) 
 VALUES ("Javier", "Solis", "jsolis@gmail.com"); --Eliminar 1 administrador
 
---Revisar
-INSERT INTO Habitaciones (Numero_habitacion,cedula_juridica,Numero_reservacion,Disponibilidad_habitaciones,Tipo_habitacion) 
-VALUES ('18',1310225,22,'2','Habitacion doble'), 
-('22',102583785,02,'5','Habitacion doble deluxe'),
-('11',302700071,08,'10','Habitacion doble deluxe'),
-('10',113310637,12,'12','Habitasion sencilla'),
-('15',112750278,45,'50','Habitacion deluxe'),
-('20',11241987,05,'3','Habitacion deluxe'),
-('1',120430162,10,'0','Habitacion sencilla')
+
 
