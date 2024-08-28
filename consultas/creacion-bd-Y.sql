@@ -59,4 +59,11 @@ VALUES ('18',1310225,22,'2','Habitacion doble'),
 
 SELECT * FROM hoteles
 
-INSERT INTO Hoteles (Cedula_juridica, Ubicacion, Tarifas, Nombre_hotel, Numero_reservacion, Numero_habitacion) VALUES (101253967, '100m Sur y 300m Este de Parque Central de la Fortuna,21007 Fortuna, Costa Rica', 30 000, 'Hotel Monte Real',)
+INSERT INTO Hoteles (Cedula_juridica, Ubicacion, Tarifas, Nombre_hotel, Numero_reservacion, Numero_habitacion) 
+VALUES ('101253967','100m Sur y 300m Este de Parque Central de la Fortuna 21007 Fortuna Costa Rica', 30 000, 'Hotel Monte Real',22,'25'),
+('20089703967','Entrada Hotel Azania 450 metros directo manteniendo la derecha ',60000, 'Terrazas del Caribe Hotel',02,'40'),
+('10125699874', 'Cartago Cartago Costa Rica', 15000,'Dreams Lodge Orosi',08, '15'),
+('2513385987', 'Calle Los Cedros, 10202 San Rafael Costa Rica',75000, 'Escazu Resident',12,'17'),
+('2223385978', 'Route 27 350 mts West Multiplaza  10203 San Jose Costa Rica',95000,'Sheraton San Jose Hoten,Costa Rica',45,'60'),
+('2003306678','200 metro al este y 800 metros al norte del Banco Nacionaaal de Tamarindo 00011 Tamarindo Costa Rica',81000, 'Wyndham Tamarindo',05,'70'),
+('1114240654', '2800 km al Sur del Restaurante Changai Piedades de Santa Ana',50000, 'Jardin de Lourdes',02,'06')
