@@ -26,32 +26,37 @@ SELECT * FROM hoteles;
 
 -- INGRESO DE INFORMACION
 
-INSERT INTO Clientes( Num_cedula, Fecha_reservacion, Dias_reservados, Nombre_hotel) VALUES ("3-0270-0071", "2023-12-25", 3, "Wyndham Escazu");
-INSERT INTO Clientes(Num_cedula, Fecha_reservacion, Dias_reservados, Nombre_hotel) VALUES ("1-0258-3785", "2023-10-15", 2, "Terrazas del Caribe"),
+INSERT INTO Clientes( Num_cedula, Fecha_reservacion, Dias_reservados, Nombre_hotel) 
+VALUES ("3-0270-0071", "2023-12-25", 3, "Wyndham Escazu");
+INSERT INTO Clientes(Num_cedula, Fecha_reservacion, Dias_reservados, Nombre_hotel)
+ VALUES ("1-0258-3785", "2023-10-15", 2, "Terrazas del Caribe"),
 ("1-12750278", "2023-09-8", 1, "Sheraton"),
 (" 1-1241-987", "2023-10-22", 2, "Wyndham Tamarindo"),
 ("1-2043-0162", "2023-02-02", 4, "Jardin de Lourdes");
--- Eliminar un cliente con un store procedures(Wyndham Escazu)
 
-
-
-
-
-
-
-INSERT INTO Administradores( Nombre, Apellido, Email) VALUES ("Javier", "Solis", "jsolis@gmail.com");
-INSERT INTO Clientes( Num_cedula, Fecha_reservacion, Dias_reservados, Nombre_hotel) VALUES ("1-1331-0637", "2023-09-8", 4, "Escazu Resident"),
+INSERT INTO Clientes( Num_cedula, Fecha_reservacion, Dias_reservados, Nombre_hotel)
+ VALUES ("1-1331-0637", "2023-09-8", 4, "Escazu Resident"),
 ("1-310-225", "2023-12-20", 3, "Monte Real");
 
 
+-- Eliminar un cliente con un store procedures(Wyndham Escazu)
+INSERT INTO Usuarios (ID_usuario,Nombre, Apellido,Correo_electronico, ID_cliente, ID_Admin)
+ VALUES ( 1,'Jose','Vargas', 'jjvargas@gmail.com',1,1);
 
+INSERT INTO Usuarios(ID_usuario,Nombre, Apellido,Correo_electronico, ID_cliente, ID_Admin)
+ VALUES (2,"Maria", "Sandoval","marias@gmail.com",4,1),
+ (3,"Luis", "Hernandez", "Imhernandez@gmail.com",1,1),
+ (4,"Marta","Quiros", "mquiros@gmail.com",2,1),
+ (5,"Ester", "Ramirez", "ester@gmail.com",5,1),
+ (6, "Marcos", "Barrientos", "mm@gmail.com",6,1),
+ (7,"Alexander", "Mena", "amena@gmail.com",7,1),
+ (8,"Javier", "Solis", "jsolis@gmail.com",6,1);
 
- --INSERT INTO Usuarios( ID_usuario, Nombre, Apellido, Correo_electronico, ID_cliente, ID_Admin) VALUES ()
-
-INSERT INTO Usuarios (ID_usuario,Nombre, Apellido,Correo_electronico, ID_cliente, ID_Admin) VALUES ( 1,'Jose','Vargas', 'jjvargas@gmail.com',1,1);
+INSERT INTO Administradores(Nombre, Apellido, Email) 
+VALUES ("Javier", "Solis", "jsolis@gmail.com"); --Eliminar 1 administrador
 
 --Revisar
-INSERT INTO Habitaciones (Numero_habitacion,Num_cedula,Numero_reservacion,Disponibilidad_habitaciones,Tipo_habitacion) 
+INSERT INTO Habitaciones (Numero_habitacion,cedula_juridica,Numero_reservacion,Disponibilidad_habitaciones,Tipo_habitacion) 
 VALUES ('18',1310225,22,'2','Habitacion doble'), 
 ('22',102583785,02,'5','Habitacion doble deluxe'),
 ('11',302700071,08,'10','Habitacion doble deluxe'),
@@ -60,5 +65,3 @@ VALUES ('18',1310225,22,'2','Habitacion doble'),
 ('20',11241987,05,'3','Habitacion deluxe'),
 ('1',120430162,10,'0','Habitacion sencilla')
 
-INSERT INTO Hoteles (Cedula_juridica, Ubicacion, Tarifas, Nombre_hotel, Numero_reservacion, Numero_habitacion) 
-VALUES (101253967, '100m Sur y 300m Este de Parque Central de la Fortuna,21007 Fortuna, Costa Rica', 30 000, 'Hotel Monte Real',)
