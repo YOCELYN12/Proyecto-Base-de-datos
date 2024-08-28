@@ -23,9 +23,9 @@ INSERT INTO Clientes(Num_cedula, Fecha_reservacion, Dias_reservados, Nombre_hote
 (" 1-1241-987", "2023-10-22", 2, "Wyndham Tamarindo"),
 ("1-2043-0162", "2023-02-02", 4, "Jardin de Lourdes");
 
-INSERT INTO Administradores (Nombre, Apellido, Email)
-VALUES ('Juan', 'Pérez', 'juan.perez@email.com');
+
 CREATE TABLE Administradores(ID_admin INT AUTO_INCREMENT PRIMARY KEY, Nombre varchar(20), Apellido VARCHAR(20), Email VARCHAR(30));
+SELECT * FROM Administradores;
 CREATE TABLE Usuarios (ID_usuario int PRIMARY KEY, Nombre VARCHAR(100), Apellido VARCHAR(100), Correo_electronico VARCHAR(255), ID_cliente INT, ID_Admin INT,FOREIGN KEY (ID_cliente) REFERENCES Clientes(ID_clientes), FOREIGN KEY (ID_Admin) REFERENCES Administradores(ID_Admin));
 SELECT * FROM Usuarios;
 
@@ -42,6 +42,7 @@ INSERT INTO Usuarios ( ID_usuario,Nombre, Apellido,Correo_electronico, ID_client
 
 SELECT * FROM  Usuarios;
 SELECT * FROM Reservas;
+--INSERT INTO Administradores(ID_admin)
 SELECT * FROM habitaciones
 
 INSERT INTO Habitaciones (Numero_habitacion,Num_cedula,Numero_reservacion,Disponibilidad_habitaciones,Tipo_habitacion) 
