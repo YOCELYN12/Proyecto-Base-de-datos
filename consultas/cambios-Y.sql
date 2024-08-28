@@ -89,3 +89,17 @@ UPDATE Habitaciones SET Disponibilidad_habitaciones = 1 WHERE Disponibilidad_hab
 UPDATE Habitaciones SET Disponibilidad_habitaciones = 0 WHERE Disponibilidad_habitaciones = 50;
 UPDATE Habitaciones SET Disponibilidad_habitaciones = 1 WHERE Disponibilidad_habitaciones = 3;
 UPDATE Habitaciones SET Disponibilidad_habitaciones = 1 WHERE Disponibilidad_habitaciones = 28;
+
+UPDATE reservas SET Numero_habitacion = 1 WHERE Numero_reservacion = 2;
+UPDATE reservas SET Numero_habitacion = 10 WHERE Numero_reservacion = 12;
+UPDATE reservas SET Numero_habitacion = 11 WHERE Numero_reservacion = 8;
+UPDATE reservas SET Numero_habitacion = 15 WHERE Numero_reservacion = 45;
+UPDATE reservas SET Numero_habitacion = 20 WHERE Numero_reservacion = 5;
+UPDATE reservas SET Numero_habitacion = 22 WHERE Numero_reservacion = 2;
+UPDATE reservas SET Numero_habitacion = 11 WHERE Numero_reservacion = 8;
+UPDATE reservas SET Numero_habitacion =  WHERE Numero_reservacion = 10;
+
+SELECT * from reservas ;
+SELECT * from habitaciones;
+SELECT * FROM usuarios;
+SELECT * from clientes
