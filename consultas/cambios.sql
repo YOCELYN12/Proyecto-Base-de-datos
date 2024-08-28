@@ -14,6 +14,15 @@ CREATE TABLE Clientes(ID_clientes INT AUTO_INCREMENT PRIMARY KEY, Num_cedula VAR
 SELECT * FROM Clientes;
 
 INSERT INTO Clientes( Num_cedula, Fecha_reservacion, Dias_reservados, Nombre_hotel) VALUES ("3-0270-0071", "2023-12-25", 3, "Wyndham Escazu");
+
+INSERT INTO Clientes( Num_cedula, Fecha_reservacion, Dias_reservados, Nombre_hotel) VALUES ("1-1331-0637", "2023-09-8", 4, "Escazu Resident"),
+("1-310-225", "2023-12-20", 3, "Monte Real");
+
+INSERT INTO Clientes(Num_cedula, Fecha_reservacion, Dias_reservados, Nombre_hotel) VALUES ("1-0258-3785", "2023-10-15", 2, "Terrazas del Caribe"),
+("1-12750278", "2023-09-8", 1, "Sheraton"),
+(" 1-1241-987", "2023-10-22", 2, "Wyndham Tamarindo"),
+("1-2043-0162", "2023-02-02", 4, "Jardin de Lourdes");
+
 INSERT INTO Administradores (Nombre, Apellido, Email)
 VALUES ('Juan', 'Pérez', 'juan.perez@email.com');
 CREATE TABLE Administradores(ID_admin INT AUTO_INCREMENT PRIMARY KEY, Nombre varchar(20), Apellido VARCHAR(20), Email VARCHAR(30));
