@@ -76,5 +76,16 @@ INSERT INTO Usuarios(ID_usuario,Nombre, Apellido,Correo_electronico, ID_cliente,
 INSERT INTO Administradores(Nombre, Apellido, Email) 
 VALUES ("Javier", "Solis", "jsolis@gmail.com"); --Eliminar 1 administrador
 
+--Informacion habitaciones
+INSERT INTO Habitaciones (Numero_habitacion, cedula_juridica, Numero_reservacion, Disponibilidad_habitaciones, Tipo_habitacion)
+VALUES ("22", "200-8970-3967",02, "28", "Habitacion doble deluxe"),
+("11", "101-2569-9874", 08,"10" ,"Habitacion doble deluxe"),
+("10", "251-338-5987", 12,"10" ,"Habitacion sencilla"),
+("15", "222-338-5978", 45, "50", "Habitacion Deluxe"),
+("20","200-330-6678", 5, "3","Habitacion Deluxe"),
+("1","111-4240-654", 2, "0", "Habitacion sencilla");
 
-
+UPDATE Habitaciones SET Disponibilidad_habitaciones = 1 WHERE Disponibilidad_habitaciones = 10;
+UPDATE Habitaciones SET Disponibilidad_habitaciones = 0 WHERE Disponibilidad_habitaciones = 50;
+UPDATE Habitaciones SET Disponibilidad_habitaciones = 1 WHERE Disponibilidad_habitaciones = 3;
+UPDATE Habitaciones SET Disponibilidad_habitaciones = 1 WHERE Disponibilidad_habitaciones = 28;
