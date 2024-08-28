@@ -38,7 +38,7 @@ CREATE TABLE Habitaciones (Numero_habitacion VARCHAR(100) PRIMARY KEY, cedula_ju
 
 
 
-INSERT INTO Usuarios ( ID_usuario,Nombre, Apellido,Correo_electronico, ID_cliente, ID_Admin) VALUES ( 1,'Jose','Vargas', 'jjvargas@gmail.com',1,1);
+INSERT INTO Usuarios (ID_usuario,Nombre, Apellido,Correo_electronico, ID_cliente, ID_Admin) VALUES ( 1,'Jose','Vargas', 'jjvargas@gmail.com',1,1);
 
 SELECT * FROM  Usuarios;
 SELECT * FROM Reservas;
