@@ -10,3 +10,9 @@
 
 
 -- 3.Consulta para buscar hoteles por nombre.
+SELECT Nombre_hotel
+FROM Hoteles;
+
+-- 4.Consulta para buscar hoteles cuya ubicación comienza con un texto específico.
+
+
