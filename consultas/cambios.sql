@@ -1,13 +1,6 @@
--- use Hoteles;
 
--- Create Table Hoteles(Cedula_Juridica INT PRIMARY KEY, Numero_habitacion INT, Numero_reservacion INT, Ubicacion VARCHAR(255), Tarifas INT, Nombre VARCHAR(255));
-
--- CREATE TABLE Administradores(ID INT PRIMARY KEY, Nombre VARCHAR(100), correo_electronico varchar(100), CONSTRAINT cédula_jurídica FOREIGN KEY (cedula_juridica) REFERENCES Hoteles(cedula_juridica));
--- CREATE TABLE Hoteles
-
--- SELECT * FROM Hoteles
--- creacion base de datos 
 DROP DATABASE Hotelogix;
+
 CREATE DATABASE Hotelogix;
 
 USE Hotelogix;
