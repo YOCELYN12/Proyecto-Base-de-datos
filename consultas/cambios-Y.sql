@@ -1,8 +1,11 @@
+-- Eliminacion de la base de datos
+DROP DATABASE Hotelogix; 
 
+-- Creacion  de la base de datos. 
 CREATE DATABASE Hotelogix;
 
+-- Se le indica que base de datos se va a utilizar
 USE Hotelogix;
-
 
 -- Creacion de todas las tablas, con sus llaves foraneas
 
@@ -14,7 +17,7 @@ CREATE TABLE Hoteles (Cedula_juridica VARCHAR(100) PRIMARY KEY, Ubicacion VARCHA
 CREATE TABLE Habitaciones (Numero_habitacion VARCHAR(100) PRIMARY KEY, cedula_juridica varchar(100), Numero_reservacion Int, Disponibilidad_habitaciones VARCHAR(100), Tipo_habitacion VARCHAR(255), FOREIGN KEY(Numero_reservacion) REFERENCES Reservas(Numero_reservacion));
 
 
--- Pruebas de que las tablas existen
+-- Consultas
 SELECT * FROM Clientes;
  SELECT * FROM Administradores;
 SELECT * FROM Usuarios;
@@ -24,7 +27,7 @@ SELECT * FROM hoteles;
 
 
 
--- INGRESO DE INFORMACION
+-- INGRESO DE DATOS A LAS TABLAS 
 
 INSERT INTO Clientes( Num_cedula, Fecha_reservacion, Dias_reservados, Nombre_hotel) 
 VALUES ("3-0270-0071", "2023-12-25", 3, "Wyndham Escazu");
@@ -38,31 +41,13 @@ INSERT INTO Clientes(Num_cedula, Fecha_reservacion, Dias_reservados, Nombre_hote
 (" 1-1241-987", "2023-10-22", 2, "Wyndham Tamarindo"),
 ("1-2043-0162", "2023-02-02", 4, "Jardin de Lourdes");
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 41a6d1159cdbba685825ff1f3b4f175fe09e7846
-
-<<<<<<<<< Temporary merge branch 1
-
 INSERT INTO Clientes( Num_cedula, Fecha_reservacion, Dias_reservados, Nombre_hotel)
  VALUES ("1-1331-0637", "2023-09-8", 4, "Escazu Resident"),
 ("1-310-225", "2023-12-20", 3, "Monte Real");
-<<<<<<< HEAD
-=======
+
 INSERT INTO Administradores(Nombre, Apellido, Email) 
-VALUES ("Javier", "Solis", "jsolis@gmail.com"); --Eliminar 1 administrador
+VALUES ("Javier", "Solis", "jsolis@gmail.com"); 
 INSERT INTO Administradores( Nombre, Apellido, Email) VALUES ("Jessica", "Madriz", "jmadriz@gmail.com");
->>>>>>> a82d2f9962fbc6386cbaeb1f9223828184848ce9
-=======
-=========
->>>>>>>>> Temporary merge branch 2
->>>>>>> 41a6d1159cdbba685825ff1f3b4f175fe09e7846
-
-
--- Eliminar un cliente con un store procedures(Wyndham Escazu)
--- INSERT INTO Usuarios (ID_usuario,Nombre, Apellido,Correo_electronico, ID_cliente, ID_Admin)
---  VALUES ( 1,'Jose','Vargas', 'jjvargas@gmail.com',1,1);
 
 INSERT INTO Usuarios(ID_usuario,Nombre, Apellido,Correo_electronico, ID_cliente, ID_Admin)
  VALUES (2,"Maria", "Sandoval","marias@gmail.com",4,1),
@@ -74,9 +59,8 @@ INSERT INTO Usuarios(ID_usuario,Nombre, Apellido,Correo_electronico, ID_cliente,
  (8,"Javier", "Solis", "jsolis@gmail.com",6,1);
 
 INSERT INTO Administradores(Nombre, Apellido, Email) 
-VALUES ("Javier", "Solis", "jsolis@gmail.com"); --Eliminar 1 administrador
+VALUES ("Javier", "Solis", "jsolis@gmail.com"); 
 
---Informacion habitaciones
 INSERT INTO Habitaciones (Numero_habitacion, cedula_juridica, Numero_reservacion, Disponibilidad_habitaciones, Tipo_habitacion)
 VALUES ("22", "200-8970-3967",02, "28", "Habitacion doble deluxe"),
 ("11", "101-2569-9874", 08,"10" ,"Habitacion doble deluxe"),
@@ -84,12 +68,19 @@ VALUES ("22", "200-8970-3967",02, "28", "Habitacion doble deluxe"),
 ("15", "222-338-5978", 45, "50", "Habitacion Deluxe"),
 ("20","200-330-6678", 5, "3","Habitacion Deluxe"),
 ("1","111-4240-654", 2, "0", "Habitacion sencilla");
+INSERT INTO habitaciones (Numero_habitacion,cedula_juridica,Numero_reservacion,Disponibilidad_habitacione,Tipo_habitacion) 
+VALUES (40,111900999,32,0,"BLABLABLA")
 
+
+-- ERROR Actualizacion de datos
+-- Se actualizan los datos en la tabla habitaciones.
 UPDATE Habitaciones SET Disponibilidad_habitaciones = 1 WHERE Disponibilidad_habitaciones = 10;
 UPDATE Habitaciones SET Disponibilidad_habitaciones = 0 WHERE Disponibilidad_habitaciones = 50;
 UPDATE Habitaciones SET Disponibilidad_habitaciones = 1 WHERE Disponibilidad_habitaciones = 3;
 UPDATE Habitaciones SET Disponibilidad_habitaciones = 1 WHERE Disponibilidad_habitaciones = 28;
 
+
+-- Actualizacion de datos pero de la tabla reservas
 UPDATE reservas SET Numero_habitacion = 1 WHERE Numero_reservacion = 2;
 UPDATE reservas SET Numero_habitacion = 10 WHERE Numero_reservacion = 12;
 UPDATE reservas SET Numero_habitacion = 11 WHERE Numero_reservacion = 8;
@@ -99,7 +90,3 @@ UPDATE reservas SET Numero_habitacion = 22 WHERE Numero_reservacion = 2;
 UPDATE reservas SET Numero_habitacion = 11 WHERE Numero_reservacion = 8;
 UPDATE reservas SET Numero_habitacion =  WHERE Numero_reservacion = 10;
 
-SELECT * from reservas ;
-SELECT * from habitaciones;
-SELECT * FROM usuarios;
-SELECT * from clientes
