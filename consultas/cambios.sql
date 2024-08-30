@@ -31,6 +31,7 @@ SELECT * FROM Reservas;
 SELECT * FROM habitaciones;
 SELECT * FROM hoteles;
 
+
 -- INGRESO DE INFORMACION
 -- DROP TABLE Clientes;
 -- DROP TABLE Usuarios;
