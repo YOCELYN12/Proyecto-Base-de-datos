@@ -7,6 +7,7 @@ WHERE Fecha_reservacion = CURDATE();
 
 SELECT * FROM reservas_realizadas;
 
+<<<<<<< HEAD
 
 -- Vistas que son:
 -- -Es una tabla
@@ -22,3 +23,7 @@ SELECT * FROM reservas_realizadas;
 -- Desventajas:
 -- -Son mas complidas de mantener y actualizar
 -- -No se pueden indexar
+=======
+-- Se manda a llamar el procedure para poder ingresar un dato de prueba, para comprobar el funcionamiento de la view
+CALL AGREGAR_RESERVA("2024-09-01",2,4,5);
+>>>>>>> b23a83f235b9895367ec8fb971bf44550890cc16
