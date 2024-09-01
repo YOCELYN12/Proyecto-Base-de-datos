@@ -1,6 +1,7 @@
 -- Eliminacion de la base de datos
 DROP DATABASE Hotelogix; 
 
+
 -- Creacion  de la base de datos. 
 CREATE DATABASE Hotelogix;
 
@@ -19,11 +20,29 @@ CREATE TABLE Habitaciones (Numero_habitacion VARCHAR(100) PRIMARY KEY, cedula_ju
 
 -- Consultas
 SELECT * FROM Clientes;
- SELECT * FROM Administradores;
+SELECT * FROM Administradores;
 SELECT * FROM Usuarios;
 SELECT * FROM Reservas;
 SELECT * FROM habitaciones;
 SELECT * FROM hoteles;
+
+
+INSERT INTO Hoteles (Cedula_juridica, Ubicacion, Tarifas, Nombre_hotel, Numero_reservacion) 
+VALUES ('200-8970-3967','Entrada Hotel Azania 450 metros directo manteniendo la derecha ',60000, 'Terrazas del Caribe Hotel',02)
+
+
+INSERT INTO Hoteles (Cedula_juridica, Ubicacion, Tarifas, Nombre_hotel, Numero_reservacion) 
+VALUES ('251-338-5987', 'Calle Los Cedros, 10202 San Rafael Costa Rica',75000, 'Escazu Resident',12);
+
+INSERT INTO Hoteles (Cedula_juridica, Ubicacion, Tarifas, Nombre_hotel, Numero_reservacion) 
+VALUES ('222-338-5978', 'Route 27 350 mts West Multiplaza  10203 San Jose Costa Rica',95000,'Sheraton San Jose Hoten,Costa Rica',45);
+
+INSERT INTO Hoteles (Cedula_juridica, Ubicacion, Tarifas, Nombre_hotel, Numero_reservacion) 
+VALUES ('200-330-6678','200 metro al este y 800 metros al norte del Banco Nacionaaal de Tamarindo 00011 Tamarindo Costa Rica',81000, 'Wyndham Tamarindo',05);
+
+,
+('200-330-6678','200 metro al este y 800 metros al norte del Banco Nacionaaal de Tamarindo 00011 Tamarindo Costa Rica',81000, 'Wyndham Tamarindo',05),
+('111-4240-654', '2800 km al Sur del Restaurante Changai Piedades de Santa Ana',50000, 'Jardin de Lourdes',02);
 
 
 
@@ -49,27 +68,43 @@ INSERT INTO Administradores(Nombre, Apellido, Email)
 VALUES ("Javier", "Solis", "jsolis@gmail.com"); 
 INSERT INTO Administradores( Nombre, Apellido, Email) VALUES ("Jessica", "Madriz", "jmadriz@gmail.com");
 
+INSERT INTO Administradores(Nombre, Apellido, Email) 
+VALUES ("Javier", "Solis", "jsolis@gmail.com"); 
+
+
 INSERT INTO Usuarios(ID_usuario,Nombre, Apellido,Correo_electronico, ID_cliente, ID_Admin)
- VALUES (2,"Maria", "Sandoval","marias@gmail.com",4,1),
- (3,"Luis", "Hernandez", "Imhernandez@gmail.com",1,1),
- (4,"Marta","Quiros", "mquiros@gmail.com",2,1),
- (5,"Ester", "Ramirez", "ester@gmail.com",5,1),
+ VALUES (3,"Luis", "Hernandez", "Imhernandez@gmail.com",1,1),
+  (5,"Ester", "Ramirez", "ester@gmail.com",5,1),
  (6, "Marcos", "Barrientos", "mm@gmail.com",6,1),
  (7,"Alexander", "Mena", "amena@gmail.com",7,1),
  (8,"Javier", "Solis", "jsolis@gmail.com",6,1);
 
-INSERT INTO Administradores(Nombre, Apellido, Email) 
-VALUES ("Javier", "Solis", "jsolis@gmail.com"); 
+
+SELECT * FROM Habitaciones;
+INSERT INTO Habitaciones (Numero_habitacion, cedula_juridica, Numero_reservacion, Disponibilidad_habitaciones, Tipo_habitacion)
+VALUES ("22", "200-8970-3967",02, "28", "Habitacion doble deluxe");
+
 
 INSERT INTO Habitaciones (Numero_habitacion, cedula_juridica, Numero_reservacion, Disponibilidad_habitaciones, Tipo_habitacion)
-VALUES ("22", "200-8970-3967",02, "28", "Habitacion doble deluxe"),
-("11", "101-2569-9874", 08,"10" ,"Habitacion doble deluxe"),
-("10", "251-338-5987", 12,"10" ,"Habitacion sencilla"),
-("15", "222-338-5978", 45, "50", "Habitacion Deluxe"),
-("20","200-330-6678", 5, "3","Habitacion Deluxe"),
-("1","111-4240-654", 2, "0", "Habitacion sencilla");
-INSERT INTO habitaciones (Numero_habitacion,cedula_juridica,Numero_reservacion,Disponibilidad_habitacione,Tipo_habitacion) 
-VALUES (40,111900999,32,0,"BLABLABLA")
+VALUES ("10", "251-338-5987", 12,"10" ,"Habitacion sencilla");
+
+
+
+
+INSERT INTO Habitaciones (Numero_habitacion, cedula_juridica, Numero_reservacion, Disponibilidad_habitaciones, Tipo_habitacion)
+VALUES ("15", "222-338-5978", 45, "50", "Habitacion Deluxe");
+
+INSERT INTO Habitaciones (Numero_habitacion, cedula_juridica, Numero_reservacion, Disponibilidad_habitaciones, Tipo_habitacion)
+VALUES ("20","200-330-6678", 5, "3","Habitacion Deluxe");
+
+
+INSERT INTO Habitaciones (Numero_habitacion, cedula_juridica, Numero_reservacion, Disponibilidad_habitaciones, Tipo_habitacion)
+VALUES ("1","111-4240-654", 2, "0", "Habitacion sencilla")
+
+-- INSERT INTO habitaciones (Numero_habitacion,cedula_juridica,Numero_reservacion,Disponibilidad_habitacione,Tipo_habitacion) 
+-- VALUES (40,111900999,32,0,"BLABLABLA")   Habitacion buena despues de hacer alter table de los store procedures
+
+SELECT * from habitaciones;
 
 
 -- ERROR Actualizacion de datos

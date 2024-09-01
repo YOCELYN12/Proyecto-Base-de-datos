@@ -12,9 +12,26 @@ END:
 CALL AGREGAR_RESERVA(1, "2023-03-31",2,5,"11");
 
 
--- Borrar los datos ingresados
--- DELETE FROM reservas where `Numero_reservacion` = 20;
-
--- Borrar trigger 
--- DROP TRIGGER Actualizar_disponibilidad_habitaciones
+-- Triggers:
+-- -Un trigger es un objeto de base de datos que se ejecuta automáticamente en respuesta a un evento
+-- específico, como la inserción, actualización o eliminación de datos en una tabla.
+-- -Los triggers se utilizan para garantizar la integridad de los datos, aplicar reglas de negocio y automatizar tareas repetitivas.
+-- Los triggers nos sirven para:
+-- -Mantenimiento de la integridad de los datos.
+-- -Automatizacion de tareas
+-- Sintaxis:
+-- CREATE TRIGGER nombre_trigger
+-- {BEFORE | AFTER} {INSERT | UPDATE | DELETE}
+-- ON nombre_tabla
+-- [FOR EACH ROW]
+-- BEGIN cuerpo del trigger
+-- END;
+-- Ejemplo; CREATE TRIGGER
+-- actualizar_fecha_modificacion
+-- after update
+-- on clientes
+-- for each row
+-- Begin
+--   undate clientes set fecha_ultima_modificacion = NOW() WHERE id = NEW.id;
+-- END;
 

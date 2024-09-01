@@ -1,26 +1,44 @@
 --1. Consulta para obtener los hoteles con mayor número de reservas. 
-SELECT COUNT(reservas.numero_reservacion) AS cantidad_reservas,hoteles.Nombre_hotel FROM reservas
+-- Utilizamos select Count Retorna cantidad de registros de la tabla reservas.numero de reservacion de resultados que cumplen
+-- con la condición usamos AS para darle un alias a las columnas de la tabla reservas 
+-- relacionando las tablas Hoteles y reservas ambas con cedulas juridicas osea mismo valores y con el group by agrupamos los registros
+SELECT COUNT(reservas.`Tiempo_reservacion`) AS cantidad_reservas,hoteles.Nombre_hotel FROM reservas
 INNER JOIN hoteles on reservas.cedula_juridica = hoteles.Cedula_juridica
 GROUP BY reservas.Numero_reservacion;
 
+ALTER TABLE reservas
+ADD COLUMN cedula_juridica VARCHAR(100),
+ADD FOREIGN KEY cedula_juridica(cedula_juridica) REFERENCES hoteles(cedula_juridica) ON DELETE CASCADE;
+--  ya altere la tabla
+
+alter table reservas
+ADD COLUMN Numero_Habitacion Varchar(100),
+ADD FOREIGN KEY Numero_habitacion(Numero_habitacion) REFERENCES habitaciones(numero_habitacion) ON DELETE CASCADE
+
+
 
 -- 2.Consulta para contar cuántas habitaciones disponibles hay en un hotel específico en una fecha dada.
+
+-- Utilizamos select Count Retorna cantidad de registros de la tabla habitaciones llamando la columna Disponibilidad de habitaciones y brindamos la fecha que queremos 
 SELECT COUNT (Disponibilidad_habitaciones) FROM habitaciones WHERE '2023-03-23' and Disponibilidad_habitaciones = 1
 
 
 -- 3.Consulta para buscar hoteles por nombre.
+-- seleccionamos de hoteles donde el hotel contenga "este texto"
 SELECT * FROM Hoteles WHERE Nombre_hotel= "Dreams Lodge Orosi";
 
 
 -- 4. Consulta para buscar hoteles cuya ubicación comienza con un texto específico.
-SELECT * FROM Hoteles WHERE Ubicacion LIKE 'Carta%';
+SELECT * FROM Hoteles WHERE Ubicacion LIKE 'Carta%'; 
 
 
 -- 5. Consulta para buscar hoteles cuya ubicación termina con un texto específico.
-SELECT * FROM Hoteles WHERE Ubicacion LIKE '%Rica';
+SELECT * FROM Hoteles WHERE Ubicacion LIKE '%Rica'; --Funciona 
 
 
 --6. Consulta para obtener las reservas de un cliente (por email) realizadas en el mes anterior.
+-- seleccionamos el correo de la tabla Usuarios y la columna fecha de reservacion de la tabla reservas 
+-- de usuarios  
 SELECT usuarios.Correo_electronico, reservas.Fecha_reservacion FROM usuarios
 INNER JOIN clientes ON clientes.ID_clientes = usuarios.ID_cliente
 INNER JOIN reservas ON reservas.ID_usuario = usuarios.ID_usuario AND usuarios.Correo_electronico = "marias@gmail.com"
@@ -42,14 +60,13 @@ FROM (
 
 Select COUNT(reservas.cedula_juridica),hoteles.Nombre_hotel FROM reservas
 INNER JOIN Hoteles ON Hoteles.Cedula_juridica = reservas.cedula_juridica
-GROUP BY Hoteles.Cedula_juridica;
-
+GROUP BY Hoteles.Cedula_juridica;  --no funciona
 
 
 --9. Consulta para listar los hoteles que tienen habitaciones disponibles pero no han sido reservadas en el último mes.
 SELECT Hoteles.Nombre_hotel FROM Hoteles
 JOIN Habitaciones ON Hoteles.Cedula_juridica = Habitaciones.cedula_juridica
 INNER JOIN Reservas ON Habitaciones.Numero_reservacion = reservas.Numero_reservacion 
-AND Reservas.Fecha_reservacion > DATE_SUB(CURDATE(), INTERVAL 1 MONTH)
-
+AND Reservas.Fecha_reservacion > DATE_SUB(CURDATE(), INTERVAL 1 MONTH)   -- no funciona
+ 
 
