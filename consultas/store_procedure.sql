@@ -5,9 +5,9 @@
 
 
 --Store Procedures para poder agregar reservas.
-CREATE PROCEDURE AGREGAR_RESERVA(IN P_Num_reservacion INT, IN P_date DATE, IN P_time INT, IN P_ID INT,IN P_Numero_habitacion INT,IN P_cedula_juridica VARCHAR(100))
+CREATE PROCEDURE AGREGAR_RESERVA(IN P_Num_reservacion INT, IN P_date DATE, IN P_time INT, IN P_ID INT)
 BEGIN 
-    INSERT INTO Reservas(Numero_reservacion, Fecha_reservacion, Tiempo_reservacion, ID_usuario,Numero_habitacion,cedula_juridica) VALUES (P_Num_reservacion, P_date, P_time, P_ID,P_Numero_habitacion,P_cedula_juridica);
+    INSERT INTO Reservas(Numero_reservacion, Fecha_reservacion, Tiempo_reservacion, ID_usuario) VALUES (P_Num_reservacion, P_date, P_time, P_ID);
 END ;
 
 -- Se llama el Store procedures para poder ingregar los datos
@@ -19,6 +19,8 @@ CALL AGREGAR_RESERVA(05, "2023-10-22",2,6);
 CALL AGREGAR_RESERVA(10, "2023-02-02",2,7);
 
 
+-- DROP PROCEDURE `AGREGAR_RESERVA`
+
 -- Store Procedures para consultar la disponibilidad de habitaciones por fecha.
 CREATE PROCEDURE DISPONIBILIDAD_HABITACIONES(IN Fecha_consultar DATE)
 BEGIN
@@ -29,6 +31,9 @@ END;
 
 CALL DISPONIBILIDAD_HABITACIONES("2024-08-28");
 CALL DISPONIBILIDAD_HABITACIONES("2024-07-25")
+
+
+SELECT * FROM reservas
 
 -- Para borrar el store procedures
 -- DROP PROCEDURE DISPONIBILIDAD_HABITACIONES;

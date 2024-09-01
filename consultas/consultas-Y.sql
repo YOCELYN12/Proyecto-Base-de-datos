@@ -3,15 +3,21 @@ SELECT COUNT(reservas.numero_reservacion) AS cantidad_reservas,hoteles.Nombre_ho
 INNER JOIN hoteles on reservas.cedula_juridica = hoteles.Cedula_juridica
 GROUP BY reservas.Numero_reservacion;
 
-
+-- CALL `AGREGAR_RESERVA`(80,"2023-02-23", 5,4,"20","251-338-5987");
+-- SELECT * FROM reservas;
+-- SELECT * FROM hoteles;
 -- SELECT * FROM HOTELES
+
 -- ALTER TABLE reservas
 -- ADD COLUMN cedula_juridica VARCHAR(100),
 -- ADD FOREIGN KEY cedula_juridica(cedula_juridica) REFERENCES hoteles(cedula_juridica) ON DELETE CASCADE;
 
+
+
 -- 2.Consulta para contar cuántas habitaciones disponibles hay en un hotel específico en una fecha dada.
 SELECT COUNT (Disponibilidad_habitaciones) FROM habitaciones WHERE '2023-03-23' and Disponibilidad_habitaciones = 1
 
+SELECT * FROM hoteles
  
 -- 3.Consulta para buscar hoteles por nombre.
 SELECT * FROM Hoteles WHERE Nombre_hotel= "Dreams Lodge Orosi";
