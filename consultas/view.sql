@@ -7,6 +7,5 @@ WHERE Fecha_reservacion = CURDATE();
 
 SELECT * FROM reservas_realizadas;
 
-SELECT * FROM reservas
-
-call `AGREGAR_RESERVA`(40,"2024-08-30",10,2,"10","222-338-5978")
+-- Se manda a llamar el procedure para poder ingresar un dato de prueba, para comprobar el funcionamiento de la view
+CALL AGREGAR_RESERVA("2024-09-01",2,4,5);

@@ -1,11 +1,19 @@
 -- Eliminacion de la base de datos
-DROP DATABASE Hotelogix; 
+-- DROP DATABASE Hotelogix; 
+
+
+
+
 
 -- Creacion  de la base de datos. 
 CREATE DATABASE Hotelogix;
 
+
+
 -- Se le indica que base de datos se va a utilizar
 USE Hotelogix;
+
+
 
 -- Creacion de todas las tablas, con sus llaves foraneas
 CREATE TABLE Clientes(ID_clientes INT AUTO_INCREMENT PRIMARY KEY, Num_cedula VARCHAR(20), Fecha_reservacion DATE, Dias_reservados INT);
@@ -15,14 +23,13 @@ CREATE TABLE Hoteles (Cedula_juridica VARCHAR(100) PRIMARY KEY, Ubicacion VARCHA
 CREATE TABLE Habitaciones (Numero_habitacion  INT AUTO_INCREMENT PRIMARY KEY, Cedula_juridica varchar(100), Disponibilidad_habitaciones BOOLEAN, Tipo_habitacion VARCHAR(255), FOREIGN KEY (cedula_juridica) REFERENCES Hoteles(cedula_juridica));
 CREATE TABLE Reservas (Numero_reservacion INT AUTO_INCREMENT PRIMARY KEY, Fecha_reservacion DATE NOT NULL, Tiempo_reservacion INT NOT NULL, Numero_habitacion INT, ID_usuario INT, FOREIGN KEY (Numero_habitacion) REFERENCES Habitaciones(Numero_habitacion), Foreign Key (ID_usuario) REFERENCES Usuarios(ID_usuario));
 
-j
 
---  DROP Table habitaciones;
---  DROP TABLE Reservas;
+
+-- DROP Table habitaciones;
+-- DROP TABLE Reservas;
 -- DROP TABLE hoteles;
-
 -- DROP TABLE clientes;
-drop TABLE usuarios;
+-- Drop TABLE usuarios;
 -- DROP TABLE administradores;
 
 
@@ -58,7 +65,6 @@ VALUES ("Javier", "Solis", "jsolis@gmail.com"),
 
 
 
-
 INSERT INTO Usuarios(Nombre, Apellido,Correo_electronico, ID_cliente, ID_Admin)
  VALUES ("Maria", "Sandoval","marias@gmail.com",4,1),
  ("Luis", "Hernandez", "Imhernandez@gmail.com",1,1),
@@ -69,6 +75,9 @@ INSERT INTO Usuarios(Nombre, Apellido,Correo_electronico, ID_cliente, ID_Admin)
  ("Javier", "Solis", "jsolis@gmail.com",6,1);
 
 
+ --Ejecutar el store procedures antes de insertar los datos de la tabla hoteles
+
+
 INSERT INTO Hoteles (Cedula_juridica, Ubicacion, Tarifas, Nombre_hotel) 
 VALUES ('200-8970-3967','Entrada Hotel Azania 450 metros directo manteniendo la derecha ',60000, 'Terrazas del Caribe Hotel'),
 ('101-2569-9874', 'Cartago Cartago Costa Rica', 15000,'Dreams Lodge Orosi'),
@@ -76,7 +85,6 @@ VALUES ('200-8970-3967','Entrada Hotel Azania 450 metros directo manteniendo la 
 ('222-338-5978', 'Route 27 350 mts West Multiplaza  10203 San Jose Costa Rica',95000,'Sheraton San Jose Hoten,Costa Rica'),
 ('200-330-6678','200 metro al este y 800 metros al norte del Banco Nacionaaal de Tamarindo 00011 Tamarindo Costa Rica',81000, 'Wyndham Tamarindo'),
 ('111-4240-654', '2800 km al Sur del Restaurante Changai Piedades de Santa Ana',50000, 'Jardin de Lourdes');
-
 
 
 INSERT INTO Habitaciones (Disponibilidad_habitaciones,Tipo_habitacion,cedula_juridica)
@@ -89,12 +97,18 @@ VALUES ("0", "Habitacion doble deluxe","200-8970-3967"),
 
 
 
+
+
+
+
+
+
+
+
 -- drop Table habitaciones
 
 -- INSERT INTO habitaciones (Numero_habitacion,cedula_juridica,Numero_reservacion,Disponibilidad_habitacioneS,Tipo_habitacion) 
 -- VALUES (40,111900999,32,0,"BLABLABLA")
-
-SELECT * FROM reservas;
 
 -- ERROR Actualizacion de datos
 -- Se actualizan los datos en la tabla habitaciones.
@@ -104,15 +118,15 @@ SELECT * FROM reservas;
 -- UPDATE Habitaciones SET Disponibilidad_habitaciones = 1 WHERE Disponibilidad_habitaciones = 28;
 
 
--- Actualizacion de datos pero de la tabla reservas   PENDIENTE
-UPDATE reservas SET Numero_habitacion = 1 WHERE Numero_reservacion = 2;
-UPDATE reservas SET Numero_habitacion = 10 WHERE Numero_reservacion = 12;
-UPDATE reservas SET Numero_habitacion = 11 WHERE Numero_reservacion = 8;
-UPDATE reservas SET Numero_habitacion = 15 WHERE Numero_reservacion = 45;
-UPDATE reservas SET Numero_habitacion = 20 WHERE Numero_reservacion = 5;
-UPDATE reservas SET Numero_habitacion = 22 WHERE Numero_reservacion = 2;
-UPDATE reservas SET Numero_habitacion = 11 WHERE Numero_reservacion = 8;
-UPDATE reservas SET Numero_habitacion =  WHERE Numero_reservacion = 10;
+-- -- Actualizacion de datos pero de la tabla reservas   PENDIENTE
+-- UPDATE reservas SET Numero_habitacion = 1 WHERE Numero_reservacion = 2;
+-- UPDATE reservas SET Numero_habitacion = 10 WHERE Numero_reservacion = 12;
+-- UPDATE reservas SET Numero_habitacion = 11 WHERE Numero_reservacion = 8;
+-- UPDATE reservas SET Numero_habitacion = 15 WHERE Numero_reservacion = 45;
+-- UPDATE reservas SET Numero_habitacion = 20 WHERE Numero_reservacion = 5;
+-- UPDATE reservas SET Numero_habitacion = 22 WHERE Numero_reservacion = 2;
+-- UPDATE reservas SET Numero_habitacion = 11 WHERE Numero_reservacion = 8;
+-- UPDATE reservas SET Numero_habitacion =  WHERE Numero_reservacion = 10;
 
 
 

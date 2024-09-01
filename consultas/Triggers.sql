@@ -21,6 +21,8 @@ BEGIN
     WHERE Numero_reservacion = NEW.Numero_reservacion;
 END //
 
+
+
 CREATE TRIGGER ActualizarDisponibilidadCancelacion
 AFTER DELETE ON Reservas
 FOR EACH ROW
@@ -31,31 +33,19 @@ BEGIN
     WHERE Numero_Reservacion = OLD.Numero_Reservacion;
 END //
 
-
-call AGREGAR_RESERVA (90,"2024-10-23",3,6)
-
 DELIMITER ;
 
 
+SELECT * from reservas;
+SELECT * from habitaciones
 
 
 
 
+drop Trigger ActualizarDisponibilidadReservas;
+DROP TRIGGER ActualizarDisponibilidadCancelacion;
 
 
-
-
-
-
-
-
-
-
-
--- Prueba
-CALL AGREGAR_RESERVA(1, "2023-03-31",2,5,"11");
-SELECT * FROM reservas;
-SELECT * FROM habitaciones
 
 -- Borrar los datos ingresados
 -- DELETE FROM reservas where `Numero_reservacion` = 20;

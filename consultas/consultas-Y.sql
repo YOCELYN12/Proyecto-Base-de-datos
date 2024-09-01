@@ -1,7 +1,39 @@
 --1. Consulta para obtener los hoteles con mayor número de reservas. 
-SELECT COUNT(reservas.numero_reservacion) AS cantidad_reservas,hoteles.Nombre_hotel FROM reservas
-INNER JOIN hoteles on reservas.cedula_juridica = hoteles.Cedula_juridica
-GROUP BY reservas.Numero_reservacion;
+
+SELECT Cedula_juridica, COUNT (Cedula_juridica) AS Numero_de_reservas 
+from habitaciones
+JOIN habitaciones on habitaciones.Cedula_juridica = habitaciones. Cedula_juridica
+JOIN reservas ON habitaciones.Numero_habitacion = reservas.Numero_reservacion
+GROUP BY `Hoteles`.`Nombre_hotel`
+ORDER BY Numero_de_reservas DESC;
+
+
+WHERE Cedula_juridica IN(
+    SELECT Cedula_juridica FROM habitaciones WHERE Disponibilidad_habitaciones = 1
+)
+
+CALL AGREGAR_RESERVA("2024-09-01",3,5,7)
+
+
+
+
+SELECT * FROM HOTELES;
+SELECT *  FROM reservas;
+SELECT * FROM habitaciones;
+
+
+
+
+
+
+
+
+
+
+
+-- SELECT COUNT(reservas.numero_reservacion) AS cantidad_reservas,hoteles.Nombre_hotel FROM reservas
+-- INNER JOIN hoteles on reservas.cedula_juridica = hoteles.Cedula_juridica
+-- GROUP BY reservas.Numero_reservacion;
 
 -- CALL `AGREGAR_RESERVA`(80,"2023-02-23", 5,4,"20","251-338-5987");
 -- SELECT * FROM reservas;
