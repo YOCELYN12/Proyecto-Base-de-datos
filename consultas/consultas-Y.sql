@@ -110,23 +110,29 @@ JOIN Habitaciones hab ON h.Cedula_juridica = hab.cedula_juridica
 LEFT JOIN Reservas r ON hab.Numero_habitacion = r.Numero_reservacion
 WHERE r.Numero_reservacion IS NULL
  OR r.Fecha_reservacion < DATE_SUB(CURDATE(), INTERVAL 1 MONTH);
--- Estudirlo a fondo.
+
+
+
+
+
+-- PRUEBAS
+
+
+
+SELECT DISTINCT h.*
+FROM Hoteles h
+JOIN Habitaciones hab ON h.Cedula_juridica = hab.cedula_juridica
+LEFT JOIN Reservas r ON hab.Numero_habitacion = r.Numero_reservacion
+WHERE r.Numero_reservacion IS NULL
+ OR r.Fecha_reservacion < DATE_SUB(CURDATE(), INTERVAL 1 MONTH); 
+
+
+
 SELECT DISTINCT  * FROM hoteles
 JOIN Habitaciones ON Hoteles.Cedula_juridica = Habitaciones.Cedula_juridica
 LEFT JOIN Reservas ON habitaciones.Numero_habitacion = reservas.Numero_reservacion
 WHERE Reservas.Numero_reservacion IS NULL
  OR Reservas.Fecha_reservacion < DATE_SUB(CURDATE(), INTERVAL 1 MONTH);
-
-
-Message Naomy Sandi Quiros
-
-
-
-
-
-
-
-
 
 
 

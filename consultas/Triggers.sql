@@ -36,6 +36,12 @@ END //
 DELIMITER ;
 
 
+-- Prueba de disponibilidad
+SELECT 
+   (SELECT count(*) FROM Habitaciones WHERE Habitaciones.Disponibilidad_habitaciones = "0") AS No_disponible,
+    (SELECT count(*) FROM Habitaciones WHERE Habitaciones.Disponibilidad_habitaciones = "1") AS disponible;
+
+
 SELECT * from reservas;
 SELECT * from habitaciones
 

@@ -41,9 +41,7 @@ CALL Disponibilidad_habitaciones("2024-08-28");
 CALL DISPONIBILIDAD_HABITACIONES("2024-07-25");
 CALL DISPONIBILIDAD_HABITACIONES("2024-09-01");
 
-
-
-
+-- 
 -- Delete from reservas WHERE Numero_reservacion = 28;
 -- Delete from reservas WHERE Numero_reservacion = 29;
 -- Delete from reservas WHERE Numero_reservacion = 30;
