@@ -25,5 +25,10 @@ SELECT * FROM reservas_realizadas;
 -- -No se pueden indexar
 =======
 -- Se manda a llamar el procedure para poder ingresar un dato de prueba, para comprobar el funcionamiento de la view
+<<<<<<< HEAD
 CALL AGREGAR_RESERVA("2024-09-01",2,4,5);
 >>>>>>> b23a83f235b9895367ec8fb971bf44550890cc16
+=======
+CALL AGREGAR_RESERVA("2024-10-09",2,4,5);
+SELECT * FROM Reservas;
+>>>>>>> 60684d6e28852ce230bbcf559476f0be9318c278

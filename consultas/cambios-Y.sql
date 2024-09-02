@@ -1,6 +1,9 @@
 -- Eliminacion de la base de datos
 DROP DATABASE Hotelogix; 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 60684d6e28852ce230bbcf559476f0be9318c278
 
 
 
@@ -39,6 +42,8 @@ SELECT * FROM Clientes;
 SELECT * FROM Administradores;
 SELECT * FROM Usuarios;
 SELECT * FROM Reservas;
+
+DROP TABLE Reservas;
 SELECT * FROM habitaciones;
 SELECT * FROM hoteles;
 

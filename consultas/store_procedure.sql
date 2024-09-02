@@ -1,3 +1,35 @@
+<<<<<<< HEAD
+=======
+-- Estructura de procesos almacenados, poniendo el delimitador, datos de entrada
+--P = parametro 
+-- Begin = que tiene que hacer
+
+
+
+-- DELIMITER //
+
+-- CREATE PROCEDURE Agregar_reserva(
+--     IN fecha_reservacion DATE,
+--     IN numero_reservacion INT,
+--     IN tiempo_reservacion INT,
+--     IN id_usuario INT
+-- )
+-- BEGIN
+--     INSERT INTO Reservas (Numero_reservacion, Fecha_reservacion, Tiempo_reservacion, ID_usuario)
+--     VALUES (numero_reservacion, fecha_reservacion, tiempo_reservacion, id_usuario);
+-- END //
+
+-- DELIMITER ;
+
+-- DROP PROCEDURE Agregar_reserva;
+
+
+
+
+
+
+
+>>>>>>> 60684d6e28852ce230bbcf559476f0be9318c278
 --Store Procedures para poder agregar reservas.
 CREATE PROCEDURE AGREGAR_RESERVA( IN P_date DATE, IN P_time INT, IN P_Numero_habitacion INT, IN P_ID INT)
 BEGIN 
@@ -11,10 +43,16 @@ END ;
 CALL AGREGAR_RESERVA("2023-10-10",1,2,3);
 CALL AGREGAR_RESERVA("2023-09-08",4,3,4);
 CALL AGREGAR_RESERVA("2023-09-08",1,4,1);
-CALL AGREGAR_RESERVA("2023-10-22",2,5,6);
+CALL AGREGAR_RESERVA("2023-10-10",2,5,6);
 CALL AGREGAR_RESERVA("2023-02-02",2,6,5);
 
 
+<<<<<<< HEAD
+=======
+SELECT * FROM Reservas;
+DESCRIBE reservas;
+
+>>>>>>> 60684d6e28852ce230bbcf559476f0be9318c278
 
 
 -- Store Procedures para consultar la disponibilidad de habitaciones por fecha.
