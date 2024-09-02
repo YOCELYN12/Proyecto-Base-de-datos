@@ -7,6 +7,28 @@ WHERE Fecha_reservacion = CURDATE();
 
 SELECT * FROM reservas_realizadas;
 
-SELECT * FROM reservas
+<<<<<<< HEAD
 
-call `AGREGAR_RESERVA`(40,"2024-08-30",10,2,"10","222-338-5978")
+-- Vistas que son:
+-- -Es una tabla
+-- virtual, su contenido esta definido por una consulta.
+-- Sintaxis:
+-- CREATE VIEW nombre_de_la_vista AS
+-- SELECT columna1, columna2, ...
+-- FROM tabla
+-- WHERE condición;
+-- Ventajas:
+-- -Protegen la informacion, restringuiendo el acceso de los usuarios y limitando la cantidad de datos para mostrar.
+-- -Son mas eficientes que las tablas fisicas para almacenar datos, ya que solo utiliza datos ya creados de otras tablas.
+-- Desventajas:
+-- -Son mas complidas de mantener y actualizar
+-- -No se pueden indexar
+=======
+-- Se manda a llamar el procedure para poder ingresar un dato de prueba, para comprobar el funcionamiento de la view
+<<<<<<< HEAD
+CALL AGREGAR_RESERVA("2024-09-01",2,4,5);
+>>>>>>> b23a83f235b9895367ec8fb971bf44550890cc16
+=======
+CALL AGREGAR_RESERVA("2024-10-09",2,4,5);
+SELECT * FROM Reservas;
+>>>>>>> 60684d6e28852ce230bbcf559476f0be9318c278
