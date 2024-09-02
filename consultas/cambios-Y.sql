@@ -77,11 +77,6 @@ INSERT INTO Usuarios(Nombre, Apellido,Correo_electronico, ID_cliente, ID_Admin)
  ("Alexander", "Mena", "amena@gmail.com",7,1),
  ("Javier", "Solis", "jsolis@gmail.com",6,1);
 
-
-
- --Ejecutar el store procedures antes de insertar los datos de la tabla hoteles
-
-
 INSERT INTO Hoteles (Cedula_juridica, Ubicacion, Tarifas, Nombre_hotel) 
 VALUES ('200-8970-3967','Entrada Hotel Azania 450 metros directo manteniendo la derecha ',60000, 'Terrazas del Caribe Hotel'),
 ('101-2569-9874', 'Cartago Cartago Costa Rica', 15000,'Dreams Lodge Orosi'),
@@ -90,7 +85,6 @@ VALUES ('200-8970-3967','Entrada Hotel Azania 450 metros directo manteniendo la 
 ('200-330-6678','200 metro al este y 800 metros al norte del Banco Nacionaaal de Tamarindo 00011 Tamarindo Costa Rica',81000, 'Wyndham Tamarindo'),
 ('111-4240-654', '2800 km al Sur del Restaurante Changai Piedades de Santa Ana',50000, 'Jardin de Lourdes');
 
-
 INSERT INTO Habitaciones (Disponibilidad_habitaciones,Tipo_habitacion,cedula_juridica)
 VALUES ("0", "Habitacion doble deluxe","200-8970-3967"),
 ("1" ,"Habitacion doble deluxe","101-2569-9874"),
@@ -98,6 +92,15 @@ VALUES ("0", "Habitacion doble deluxe","200-8970-3967"),
 ("0", "Habitacion Deluxe","222-338-5978"),
 ("1","Habitacion Deluxe","200-330-6678"),
 ("0", "Habitacion sencilla","111-4240-654");
+
+
+ --Ejecutar el store procedures antes de insertar los datos de la tabla hoteles
+
+
+
+
+
+
 
 
 

@@ -8,7 +8,6 @@ ORDER BY Total_Reservas DESC;
 
 
 
-
 --2. Consulta para Contar Cuántas Habitaciones Disponibles Hay en un Hotel Específico en una Fecha Dada
 SELECT COUNT(hab.Numero_habitacion) AS Habitaciones_Disponibles
 FROM Habitaciones hab
