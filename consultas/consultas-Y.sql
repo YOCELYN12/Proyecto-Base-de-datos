@@ -82,7 +82,7 @@ SELECT * FROM Hoteles WHERE Ubicacion LIKE 'Carta%';
 
 
 -- 5. Consulta para buscar hoteles cuya ubicación termina con un texto específico.
-SELECT * FROM Hoteles WHERE Ubicacion LIKE '%Rica'; --Funciona 
+SELECT * FROM Hoteles WHERE Ubicacion LIKE '%R'; --Funciona 
 
 
 <<<<<<< HEAD
