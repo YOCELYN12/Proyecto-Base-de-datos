@@ -24,13 +24,21 @@ WHERE Nombre_hotel LIKE '%Jardin%';
 --Específico
 SELECT *
 FROM Hoteles
+<<<<<<< HEAD
 WHERE Ubicacion LIKE 'Rica%';
+=======
+WHERE Ubicacion LIKE 'R%';
+>>>>>>> 60684d6e28852ce230bbcf559476f0be9318c278
 
 -- 5. Consulta para Buscar Hoteles Cuya Ubicación Termina con un Texto
 --Específico
 SELECT *
 FROM Hoteles
+<<<<<<< HEAD
 WHERE Ubicacion LIKE '%a';
+=======
+WHERE Ubicacion LIKE '%Rica';
+>>>>>>> 60684d6e28852ce230bbcf559476f0be9318c278
 
 --6. Consulta para Obtener las Reservas de un Cliente Realizadas por Email en
 --el Mes Anterior
@@ -98,3 +106,9 @@ WHERE Reservas.Numero_reservacion IS NULL
  
 
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 60684d6e28852ce230bbcf559476f0be9318c278

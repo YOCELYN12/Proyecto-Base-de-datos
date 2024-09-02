@@ -1,5 +1,5 @@
 -- Eliminacion de la base de datos
--- DROP DATABASE Hotelogix; 
+DROP DATABASE Hotelogix; 
 
 
 
@@ -39,6 +39,8 @@ SELECT * FROM Clientes;
 SELECT * FROM Administradores;
 SELECT * FROM Usuarios;
 SELECT * FROM Reservas;
+
+DROP TABLE Reservas;
 SELECT * FROM habitaciones;
 SELECT * FROM hoteles;
 

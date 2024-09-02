@@ -49,7 +49,7 @@ END //
 DELIMITER ;
 
 
-DELETE FROM reservas WHERE `Numero_reservacion`= 35
+DELETE FROM reservas WHERE `Numero_reservacion`= 8
 
 
 SELECT * from reservas;
